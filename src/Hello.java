@@ -1,5 +1,5 @@
 
-public class hello {
+public class Hello {
     public static void main(String[] args) {
         System.out.println("And so it begins..");
         // Calls and runs the while loop method
