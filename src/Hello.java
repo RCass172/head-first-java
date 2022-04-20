@@ -29,9 +29,6 @@ public class Hello {
             System.out.print("Bee");
             x = x + 1;
         }
-        if (x == 3) {
-            System.out.println("Do, you are my sunshine");
-        }
     }
 
     // Creates the green bottles method
