@@ -16,7 +16,7 @@ public class Hello {
         while (x > 0) {
             System.out.print(x + "..");
             // makes sure the loop doesn't run forever
-            x = x - 1;
+            x--;
         }
         System.out.println("Hello World ^ ^");
     }
@@ -27,7 +27,7 @@ public class Hello {
         while (x < 3) {
             System.out.print("Doo");
             System.out.print("Bee");
-            x = x + 1;
+            x++;
         }
     }
 
@@ -41,7 +41,7 @@ public class Hello {
             System.out.println("Take one down and pass it around,");
 
             // Takes away a bottle each loop
-            num = num - 1;
+            num--;
             // if number is 1, it changes bottles to singular
             if (num == 1) {
                 bottle = "bottle";
