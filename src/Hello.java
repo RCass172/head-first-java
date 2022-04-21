@@ -9,6 +9,8 @@ public class Hello {
         greenBottles();
         shuffle1();
         poolPuzzleOne();
+        dog();
+        cat();
     }
 
     // Creates the intro method
@@ -97,5 +99,27 @@ public class Hello {
             System.out.println();
             x++;
         }
+    }
+
+    public static void dog() {
+        // Creates an object from the Animal class
+        Animal animal = new Animal();
+        animal.type = "Dog";
+        animal.name = "Kali";
+        animal.age = 5;
+
+        animal.speak();
+        System.out.println("Im a " + animal.type + " called " + animal.name + " and I'm " + animal.age + " years old");
+    }
+
+    public static void cat() {
+        // Creates an object from the Animal class
+        Animal animal2 = new Animal();
+        animal2.type = "Cat";
+        animal2.name = "Gooby";
+        animal2.age = 9;
+
+        animal2.speak();
+        System.out.println("I'm " + animal2.name + " the " + animal2.type);
     }
 }
