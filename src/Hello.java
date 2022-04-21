@@ -103,7 +103,7 @@ public class Hello {
 
     public static void dog() {
         // Creates an object from the Animal class
-        Animal animal = new Animal();
+        Dog animal = new Dog();
         animal.type = "Dog";
         animal.name = "Kali";
         animal.age = 5;
@@ -114,12 +114,14 @@ public class Hello {
 
     public static void cat() {
         // Creates an object from the Animal class
-        Animal animal2 = new Animal();
+        Cat animal2 = new Cat();
         animal2.type = "Cat";
         animal2.name = "Gooby";
         animal2.age = 9;
 
-        animal2.speak();
+        for (int i = 0; i < 3; i++) {
+            animal2.speak(i);
+        }
         System.out.println("I'm " + animal2.name + " the " + animal2.type);
     }
 }
