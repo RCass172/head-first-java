@@ -10,7 +10,7 @@ public class Hello {
         shuffle1();
         poolPuzzleOne();
         dog();
-        cat(3);
+        cat();
     }
 
     // Creates the intro method
@@ -112,10 +112,9 @@ public class Hello {
         System.out.println("Im a " + animal.type + " called " + animal.name + " and I'm " + animal.age + " years old");
     }
 
-    public static void cat(int i) {
-        String meow = "";
+    public static void cat() {
         // Creates an object from the Animal class
-        Animal animal2 = new Cat();
+        Cat animal2 = new Cat();
         animal2.type = "Cat";
         animal2.name = "Gooby";
         animal2.age = 9;
@@ -123,11 +122,6 @@ public class Hello {
         animal2.speak();
         System.out.println("I'm " + animal2.name + " the " + animal2.type);
 
-        for(int iterator = 0; iterator < i; iterator++){
-
-            meow = meow.concat("meooww ");
-
-        }
-        System.out.println(meow);
+        animal2.speak(5);
     }
 }
