@@ -7,6 +7,11 @@ public class Hello {
         dooBee();
         System.out.println("");
         greenBottles();
+        shuffle1();
+        poolPuzzleOne();
+        dog();
+        cat();
+        echoTestDrive();
     }
 
     // Creates the intro method
@@ -54,5 +59,88 @@ public class Hello {
                 System.out.println("There'll be no green bottles of beer on the wall :'(");
             }
         }
+    }
+
+    public static void shuffle1() {
+        int x = 3;
+        while (x > 0) {
+            if (x > 2) {
+                System.out.print("a");
+            }
+            x--;
+            System.out.print("-");
+            if (x == 2) {
+                System.out.print("b c");
+            }
+            if (x == 1) {
+                System.out.println("d");
+                x--;
+            }
+        }
+    }
+
+    public static void poolPuzzleOne() {
+        int x = 0;
+        while(x < 4) {
+            System.out.print("a");
+            if (x < 1) {
+                System.out.print(" ");
+            }
+            System.out.print("n");
+            if (x > 1) {
+                System.out.print(" oyster");
+                x = x + 2;
+            }
+            if (x == 1) {
+                System.out.print("noys");
+            }
+            if (x < 1) {
+                System.out.print("oise");
+            }
+            System.out.println();
+            x++;
+        }
+    }
+
+    public static void dog() {
+        // Creates an object from the Animal class
+        Animal animal = new Dog();
+        animal.type = "Dog";
+        animal.name = "Kali";
+        animal.age = 5;
+
+        animal.speak();
+        System.out.println("Im a " + animal.type + " called " + animal.name + " and I'm " + animal.age + " years old");
+    }
+
+    public static void cat() {
+        // Creates an object from the Animal class
+        Cat animal2 = new Cat();
+        animal2.type = "Cat";
+        animal2.name = "Gooby";
+        animal2.age = 9;
+
+        animal2.speak();
+        System.out.println("I'm " + animal2.name + " the " + animal2.type);
+
+        animal2.speak(5);
+    }
+
+    public static void echoTestDrive() {
+        Echo e1 = new Echo();
+        Echo e2 = new Echo();
+        int x = 0;
+        while ( x < 4 ) {
+            e1.hello();
+            e1.count = e1.count + 1;
+            if ( x == 3 ) {
+                e2.count = e2.count + 1;
+            }
+            if ( x > 0 ) {
+                e2.count = e2.count + e1.count;
+            }
+            x = x + 1;
+        }
+        System.out.println(e2.count);
     }
 }
