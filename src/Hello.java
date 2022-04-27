@@ -14,6 +14,7 @@ public class Hello {
         echoTestDrive();
         codeMagnet();
         poolPuzzleTwo();
+        reverseString();
     }
 
     // Creates the intro method
@@ -190,5 +191,17 @@ public class Hello {
         ta[2].area = 343;
         System.out.print("y = " + y);
         System.out.println(", t5 area = " + t5.area);
+    }
+
+    public static void reverseString() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your top 3 bands from least favourite to most");
+        String third = input.nextLine();
+        String second = input.nextLine();
+        String first = input.nextLine();
+
+        System.out.println("No. 1: " + first);
+        System.out.println("No. 2: " + second);
+        System.out.println("No. 3: " + third);
     }
 }
