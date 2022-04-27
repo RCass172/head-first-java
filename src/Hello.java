@@ -15,6 +15,7 @@ public class Hello {
         codeMagnet();
         poolPuzzleTwo();
         reverseString();
+        printInt();
     }
 
     // Creates the intro method
@@ -193,6 +194,9 @@ public class Hello {
         System.out.println(", t5 area = " + t5.area);
     }
 
+    // Write a simple program that using the Scanner utility reads
+    // three Strings and prints the output in the reverse order,
+    // each string on a new line.
     public static void reverseString() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your top 3 bands from least favourite to most");
@@ -203,5 +207,17 @@ public class Hello {
         System.out.println("No. 1: " + first);
         System.out.println("No. 2: " + second);
         System.out.println("No. 3: " + third);
+    }
+
+    // Write a program that prints numbers from 0 to 9,
+    // but in the backward order. All numbers must be in
+    // the same line. Separate them by a space.
+    public static void printInt() {
+        int x = 9;
+        while (x >= 0) {
+            System.out.print(x + " ");
+            x--;
+        }
+
     }
 }
