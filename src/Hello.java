@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Hello {
     public static void main(String[] args) {
         System.out.println("And so it begins..");
@@ -12,6 +12,8 @@ public class Hello {
         dog();
         cat();
         echoTestDrive();
+        codeMagnet();
+        poolPuzzleTwo();
     }
 
     // Creates the intro method
@@ -142,5 +144,51 @@ public class Hello {
             x = x + 1;
         }
         System.out.println(e2.count);
+    }
+
+    public static void codeMagnet() {
+        String[] islands = new String[4];
+        islands[0] = "Ireland";
+        islands[1] = "Bermuda";
+        islands[2] = "Fiji";
+        islands[3] = "Hawaii";
+
+        int[] index = new int[4];
+        index[0] = 1;
+        index[1] = 3;
+        index[2] = 0;
+        index[3] = 2;
+
+        int y = 0;
+        int ref;
+        while (y < 4) {
+            ref = index[y];
+            System.out.print("Island = ");
+            System.out.println(islands[ref]);
+            y++;
+        }
+    }
+
+    public static void poolPuzzleTwo() {
+        Triangle[] ta = new Triangle[4];
+        int x = 0;
+
+        while (x < 4) {
+            ta[x] = new Triangle();
+            ta[x].height = (x + 1) * 2;
+            ta[x].length = x + 4;
+            ta[x].setArea();
+
+            System.out.print("triangle " + x + ", area");
+            System.out.println(" = " + ta[x].area);
+            x++;
+        }
+
+        int y = x;
+        x = 27;
+        Triangle t5 = ta[2];
+        ta[2].area = 343;
+        System.out.print("y = " + y);
+        System.out.println(", t5 area = " + t5.area);
     }
 }

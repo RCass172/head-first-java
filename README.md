@@ -32,7 +32,8 @@ class DogTestDrive {
 }
 ```
 
-***The Heap*** - This is an area of memory an object goes to when created
+***The Heap*** - This is an area of memory an object goes to when created. When an 
+object has no reference, it is eligible for Garbage Collection (GC)
 
 ***Java Archive*** - This is a .jar file used to hold all the apps files, it
 includes a text file called **manifest** which defines the class containing the main() to run
@@ -51,3 +52,27 @@ enum Level {
 Level myVar = Level.MEDIUM    
 System.out.println(myVar)    // returns MEDIUM
 ```
+
+***Reserved Words***
+![list of reserved words](img.png)
+
+***Variable Types***
+
+**Primitive** - There are 8 types that all represent the actual value of the variable:
+1. Boolean
+2. Char
+3. Long
+4. Int
+5. Short
+6. Byte
+7. Double
+8. Float
+
+**Reference** - These contain bits representing a way to get to a specific object, e.g.
+
+```
+Dog myDog = new Dog()
+```
+
+- All reference variable are the same size on each JVM, regardless of the size of the object they reference
+
