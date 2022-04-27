@@ -16,6 +16,8 @@ public class Hello {
         poolPuzzleTwo();
         reverseString();
         printInt();
+        System.out.println("");
+        christmasTree();
     }
 
     // Creates the intro method
@@ -219,5 +221,21 @@ public class Hello {
             x--;
         }
 
+    }
+
+    public static void christmasTree() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How tall would you like your christmas tree?");
+        int height = input.nextInt();
+
+        for (int x = 0; x < height; x++) {
+            for (int y = 0; y < height - x; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 0; z < (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
     }
 }
