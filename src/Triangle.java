@@ -4,6 +4,6 @@ public class Triangle {
     int length;
 
     void setArea() {
-        area = (height * length) / 2;
+        area = height * length / 2d;
     }
 }
