@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Hello {
     public static void main(String[] args) {
         System.out.println("And so it begins..");
@@ -12,6 +12,12 @@ public class Hello {
         dog();
         cat();
         echoTestDrive();
+        codeMagnet();
+        poolPuzzleTwo();
+        reverseString();
+        printInt();
+        System.out.println("");
+        christmasTree();
     }
 
     // Creates the intro method
@@ -142,5 +148,94 @@ public class Hello {
             x = x + 1;
         }
         System.out.println(e2.count);
+    }
+
+    public static void codeMagnet() {
+        String[] islands = new String[4];
+        islands[0] = "Ireland";
+        islands[1] = "Bermuda";
+        islands[2] = "Fiji";
+        islands[3] = "Hawaii";
+
+        int[] index = new int[4];
+        index[0] = 1;
+        index[1] = 3;
+        index[2] = 0;
+        index[3] = 2;
+
+        int y = 0;
+        int ref;
+        while (y < 4) {
+            ref = index[y];
+            System.out.print("Island = ");
+            System.out.println(islands[ref]);
+            y++;
+        }
+    }
+
+    public static void poolPuzzleTwo() {
+        Triangle[] ta = new Triangle[4];
+        int x = 0;
+
+        while (x < 4) {
+            ta[x] = new Triangle();
+            ta[x].height = (x + 1) * 2;
+            ta[x].length = x + 4;
+            ta[x].setArea();
+
+            System.out.print("triangle " + x + ", area");
+            System.out.println(" = " + ta[x].area);
+            x++;
+        }
+
+        int y = x;
+        x = 27;
+        Triangle t5 = ta[2];
+        ta[2].area = 343;
+        System.out.print("y = " + y);
+        System.out.println(", t5 area = " + t5.area);
+    }
+
+    // Write a simple program that using the Scanner utility reads
+    // three Strings and prints the output in the reverse order,
+    // each string on a new line.
+    public static void reverseString() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your top 3 bands from least favourite to most");
+        String third = input.nextLine();
+        String second = input.nextLine();
+        String first = input.nextLine();
+
+        System.out.println("No. 1: " + first);
+        System.out.println("No. 2: " + second);
+        System.out.println("No. 3: " + third);
+    }
+
+    // Write a program that prints numbers from 0 to 9,
+    // but in the backward order. All numbers must be in
+    // the same line. Separate them by a space.
+    public static void printInt() {
+        int x = 9;
+        while (x >= 0) {
+            System.out.print(x + " ");
+            x--;
+        }
+
+    }
+
+    public static void christmasTree() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How tall would you like your christmas tree?");
+        int height = input.nextInt();
+
+        for (int x = 0; x < height; x++) {
+            for (int y = 0; y < height - x; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 0; z < (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
     }
 }
