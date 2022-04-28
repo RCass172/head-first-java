@@ -14,11 +14,12 @@ public class Hello {
         echoTestDrive();
         codeMagnet();
         poolPuzzleTwo();
-        reverseString();
+        //reverseString();
         printInt();
         System.out.println("");
-        christmasTree();
+        //christmasTree();
         puzzle4();
+        simpleStartGame();
     }
 
     // Creates the intro method
@@ -258,5 +259,26 @@ public class Hello {
             result = result + values[i].doStuff(i);
         }
         System.out.println("result " + result);
+    }
+
+    public static void simpleStartGame() {
+        int numOfGuesses = 0;
+        GameHelper helper = new GameHelper();
+        SimpleStart theStart = new SimpleStart();
+        int randomNum = (int) (Math.random() * 5);
+        int[] locations = {randomNum, randomNum + 1, randomNum + 2};
+        theStart.setLocationCells(locations);
+        boolean isAlive = true;
+
+        while (isAlive) {
+            int guess = helper.getUserInput("Enter a number");
+            String result = theStart.checkYourself(guess);
+            numOfGuesses++;
+
+            if (result.equals("kill")) {
+                isAlive = false;
+                System.out.println("You took " + numOfGuesses + " guesses");
+            }
+        }
     }
 }
