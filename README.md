@@ -32,7 +32,8 @@ class DogTestDrive {
 }
 ```
 
-***The Heap*** - This is an area of memory an object goes to when created
+***The Heap*** - This is an area of memory an object goes to when created. When an 
+object has no reference, it is eligible for Garbage Collection (GC)
 
 ***Java Archive*** - This is a .jar file used to hold all the apps files, it
 includes a text file called **manifest** which defines the class containing the main() to run
@@ -51,3 +52,37 @@ enum Level {
 Level myVar = Level.MEDIUM    
 System.out.println(myVar)    // returns MEDIUM
 ```
+
+***Reserved Words***
+![list of reserved words](img.png)
+
+***Variable Types***
+
+**Primitive** - There are 8 types that all represent the actual value of the variable. Primitives have their 
+Object wrapper classes with below examples:
+1. boolean e.g. ```boolean correct = true;```
+2. char e.g. ```char letter = 'r';```
+3. long e.g. ```long num = 20222022274L;```
+4. int e.g. ```int year = 2022;```
+5. short e.g. ```short temp = -50;```
+6. byte e.g. ```byte range = 120;```
+7. double e.g. ```double degree = -5.3;```
+8. float e.g. ```float degree = -5.3f;```
+
+**Reference** - These contain bits representing a way to get to a specific object, e.g.
+
+```
+Dog myDog = new Dog()
+```
+
+- All reference variable are the same size on each JVM, regardless of the size of the object they reference
+
+***Strings***
+
+In java, strings are immutable objects as they cannot be changed. 
+
+The same string object can be shared for multiple references which allows for saving of memory. 
+
+A variable which is assigned a new value will create a new object, as the initial 
+object cannot be changed. The initial object will then be eligible for GC as it 
+doesn't have any reference to anything.
