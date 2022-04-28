@@ -1,4 +1,12 @@
+package head.first.service;
+
+import head.first.pojo.Animal;
+import head.first.pojo.Cat;
+import head.first.pojo.Dog;
+import head.first.pojo.Echo;
+
 import java.util.Scanner;
+
 public class Hello {
     public static void main(String[] args) {
         System.out.println("And so it begins..");
@@ -31,7 +39,7 @@ public class Hello {
             // makes sure the loop doesn't run forever
             x--;
         }
-        System.out.println("Hello World ^ ^");
+        System.out.println("head.first.service.Hello World ^ ^");
     }
 
     // Creates the dooBee method
@@ -111,9 +119,9 @@ public class Hello {
     }
 
     public static void dog() {
-        // Creates an object from the Animal class
+        // Creates an object from the head.first.pojo.Animal class
         Animal animal = new Dog();
-        animal.type = "Dog";
+        animal.type = "head.first.pojo.Dog";
         animal.name = "Kali";
         animal.age = 5;
 
@@ -122,9 +130,9 @@ public class Hello {
     }
 
     public static void cat() {
-        // Creates an object from the Animal class
+        // Creates an object from the head.first.pojo.Animal class
         Cat animal2 = new Cat();
-        animal2.type = "Cat";
+        animal2.type = "head.first.pojo.Cat";
         animal2.name = "Gooby";
         animal2.age = 9;
 

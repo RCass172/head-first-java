@@ -1,3 +1,5 @@
+package head.first.service;
+
 public class Value {
     int intValue;
     public int doStuff(int factor) {

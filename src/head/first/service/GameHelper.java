@@ -1,3 +1,5 @@
+package head.first.service;
+
 import java.util.Scanner;
 public class GameHelper {
     public int getUserInput(String prompt) {

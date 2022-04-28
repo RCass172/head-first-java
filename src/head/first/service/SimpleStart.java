@@ -1,3 +1,5 @@
+package head.first.service;
+
 public class SimpleStart {
     private int[] locationCells;
     private int numOfHits = 0;

@@ -1,9 +1,11 @@
+package head.first.pojo;
+
 public class Cat extends Animal {
-    void speak() {
+    public void speak() {
         System.out.println("Meoww");
     }
     // overloaded method
-    void speak(int i) {
+    public void speak(int i) {
         String meow = "";
         for(int iterator = 0; iterator < i; iterator++){
 
