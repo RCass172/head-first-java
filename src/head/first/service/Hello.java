@@ -1,4 +1,12 @@
+package head.first.service;
+
+import head.first.pojo.Animal;
+import head.first.pojo.Cat;
+import head.first.pojo.Dog;
+import head.first.pojo.Echo;
+
 import java.util.Scanner;
+
 public class Hello {
     public static void main(String[] args) {
         System.out.println("And so it begins..");
@@ -14,10 +22,12 @@ public class Hello {
         echoTestDrive();
         codeMagnet();
         poolPuzzleTwo();
-        reverseString();
+        //reverseString();
         printInt();
         System.out.println("");
-        christmasTree();
+        //christmasTree();
+        puzzle4();
+        simpleStartGame();
     }
 
     // Creates the intro method
@@ -29,7 +39,7 @@ public class Hello {
             // makes sure the loop doesn't run forever
             x--;
         }
-        System.out.println("Hello World ^ ^");
+        System.out.println("head.first.service.Hello World ^ ^");
     }
 
     // Creates the dooBee method
@@ -109,9 +119,9 @@ public class Hello {
     }
 
     public static void dog() {
-        // Creates an object from the Animal class
+        // Creates an object from the head.first.pojo.Animal class
         Animal animal = new Dog();
-        animal.type = "Dog";
+        animal.type = "head.first.pojo.Dog";
         animal.name = "Kali";
         animal.age = 5;
 
@@ -120,9 +130,9 @@ public class Hello {
     }
 
     public static void cat() {
-        // Creates an object from the Animal class
+        // Creates an object from the head.first.pojo.Animal class
         Cat animal2 = new Cat();
-        animal2.type = "Cat";
+        animal2.type = "head.first.pojo.Cat";
         animal2.name = "Gooby";
         animal2.age = 9;
 
@@ -236,6 +246,47 @@ public class Hello {
                 System.out.print("*");
             }
             System.out.println(" ");
+        }
+    }
+
+    public static void puzzle4() {
+        Value[] values = new Value[6];
+        int number = 1;
+        int i = 0;
+        while (i < 6) {
+            values[i] = new Value();
+            values[i].intValue = number;
+            number = number * 10;
+            i++;
+        }
+
+        int result = 0;
+        i = 6;
+        while (i > 0) {
+            i--;
+            result = result + values[i].doStuff(i);
+        }
+        System.out.println("result " + result);
+    }
+
+    public static void simpleStartGame() {
+        int numOfGuesses = 0;
+        GameHelper helper = new GameHelper();
+        SimpleStart theStart = new SimpleStart();
+        int randomNum = (int) (Math.random() * 5);
+        int[] locations = {randomNum, randomNum + 1, randomNum + 2};
+        theStart.setLocationCells(locations);
+        boolean isAlive = true;
+
+        while (isAlive) {
+            int guess = helper.getUserInput("Enter a number");
+            String result = theStart.checkYourself(guess);
+            numOfGuesses++;
+
+            if (result.equals("kill")) {
+                isAlive = false;
+                System.out.println("You took " + numOfGuesses + " guesses");
+            }
         }
     }
 }

@@ -1,3 +1,5 @@
+package head.first.service;
+
 public class Triangle {
     double area;
     int height;
