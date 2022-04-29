@@ -1,9 +1,9 @@
-package head.first.service;
+package main.java.service;
 
-import head.first.pojo.Animal;
-import head.first.pojo.Cat;
-import head.first.pojo.Dog;
-import head.first.pojo.Echo;
+import main.java.pojo.Animal;
+import main.java.pojo.Cat;
+import main.java.pojo.Dog;
+import main.java.pojo.Echo;
 
 import java.util.Scanner;
 

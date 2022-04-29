@@ -1,4 +1,4 @@
-package head.first.pojo;
+package main.java.pojo;
 
 public class Cat extends Animal {
     public void speak() {

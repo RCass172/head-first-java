@@ -1,4 +1,4 @@
-package head.first.service;
+package main.java.service;
 
 public class SimpleStart {
     private int[] locationCells;
