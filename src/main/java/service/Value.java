@@ -1,4 +1,4 @@
-package head.first.service;
+package main.java.service;
 
 public class Value {
     int intValue;

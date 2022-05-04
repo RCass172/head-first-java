@@ -1,4 +1,4 @@
-package head.first.pojo;
+package main.java.pojo;
 
 public class Echo {
     public int count = 0;

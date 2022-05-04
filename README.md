@@ -14,7 +14,7 @@ class can do, and knows things unique to that particular object.
 ***Main Method*** - This is used to start the Java app
 
 ```
-class head.first.pojo.Dog {
+class Dog {
   int size;        // instance variables
   String breed;    // instance variables
   
@@ -25,7 +25,7 @@ class head.first.pojo.Dog {
 
 class DogTestDrive {
   public static void main (String[] args) {  // main method used to start app
-    head.first.pojo.Dog d = new head.first.pojo.Dog();   // creates a dog object
+    Dog d = new Dog();   // creates a dog object
     d.size = 40;         // dot operator used to access class variable
     d.bark();            // and call the bark method
   }
@@ -72,7 +72,7 @@ Object wrapper classes with below examples:
 **Reference** - These contain bits representing a way to get to a specific object, e.g.
 
 ```
-head.first.pojo.Dog myDog = new head.first.pojo.Dog()
+Dog myDog = new Dog()
 ```
 
 - All reference variable are the same size on each JVM, regardless of the size of the object they reference

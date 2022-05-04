@@ -1,4 +1,4 @@
-package head.first.service;
+package main.java.service;
 
 import java.util.Scanner;
 public class GameHelper {
